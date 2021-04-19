@@ -1,0 +1,76 @@
+﻿[Box:  - ai.Default_KonsolenSpieler<T extends Game>]
+X=1004
+Y=366
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - ai.Evaluator<T extends Game>]
+X=1041
+Y=126
+MinVis=0
+ShowParameter=0
+SortOrder=0
+ShowIcons=0
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - ai.Game<T extends Game>]
+X=80
+Y=29
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - ai.GameState<T extends Game>]
+X=25
+Y=362
+MinVis=0
+ShowParameter=0
+SortOrder=0
+ShowIcons=0
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - ai.Player<T extends Game>]
+X=438
+Y=349
+MinVis=0
+ShowParameter=0
+SortOrder=0
+ShowIcons=0
+FontSize=12
+FontName=Segoe UI
+
+[Box:  - ai.TreeKI<T extends Game <T>>]
+X=574
+Y=97
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+FontSize=12
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=1
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=12
+ShowObjectDiagram=0
+
+[Interactive]
+I0=
+
