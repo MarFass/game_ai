@@ -325,6 +325,14 @@ public class Warlands implements GameState<DiceWar>{
 		return null;
 	}
 
+	public void nextPlayer() {
+		if(currentPlayer.equals(p1)) {
+			currentPlayer=p2;
+		}else {
+			currentPlayer=p1;
+		}
+	}
+
 //	public static void main(String[] args) {
 //		Die[][] dice = new Die[7][7];
 //		dice[0][0]=new Die(4,true);

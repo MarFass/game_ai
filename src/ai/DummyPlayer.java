@@ -1,9 +1,7 @@
-package bauernschach;
+package ai;
 
-import ai.GameState;
-import ai.Player;
 
-public class DummyPlayer implements Player<Bauernschach> {
+public class DummyPlayer<T extends Game> implements Player<T> {
 	private String name;
 	
 
@@ -14,13 +12,13 @@ public class DummyPlayer implements Player<Bauernschach> {
 	}
 
 	@Override
-	public GameState<Bauernschach> setUp(GameState<Bauernschach> gs) {
+	public GameState<T> setUp(GameState<T> gs) {
 		// TODO Auto-generated method stub
 		return gs;
 	}
 
 	@Override
-	public GameState<Bauernschach> turn(GameState<Bauernschach> gs) {
+	public GameState<T> turn(GameState<T> gs) {
 		// TODO Auto-generated method stub
 		try {
 		return gs.getPossibleMoves().get(0);

@@ -33,7 +33,6 @@ public abstract class Game<T extends Game> {
 	
 	public List<Player<T>> round() {
 			for(Player<T> p:players) {
-				gs.setCurrentPlayer(p);
 				gs=(GameState<T>) p.turn(gs);
 				List<Player<T>> winner=isEnd();
 				if(winner!=null) {

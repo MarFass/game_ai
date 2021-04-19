@@ -19,8 +19,10 @@ public class DiceWarTreeKI extends TreeKI<DiceWar> {
 		int x;
 		if(ret.getP1().equals(this)) {
 			x=0;
+			ret.setReserve1(13);
 		}else {
 			x=6;
+			ret.setReserve2(13);
 		}
 		ret.getDice()[x][1]=new Die(4,this);
 		ret.getDice()[x][3]=new Die(6,this);

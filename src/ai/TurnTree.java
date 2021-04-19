@@ -21,7 +21,9 @@ public class TurnTree<T extends Game> {
 		this.e=e;
 		nexts=new ArrayList<TurnTree<T>>();
 		if(depth>0) {
+			try {
 			fillNextsWithPossibleMoves(depth);
+			}catch(java.lang.OutOfMemoryError err) {nexts= new ArrayList<TurnTree<T>>();}
 		}
 	}
 

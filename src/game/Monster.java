@@ -14,7 +14,9 @@ public abstract class Monster {
 		possibleMoves.addAll(upgrade(w,x,y));
 		possibleMoves.addAll(spell(w,x,y));
 		possibleMoves.addAll(attack(w,x,y));
-		
+		for(Warlands pm:possibleMoves) {
+			pm.nextPlayer();
+		}
 		return possibleMoves;
 	}
 
@@ -134,10 +136,18 @@ public abstract class Monster {
 	
 	protected Warlands getAttacked(Warlands w,int x1,int y1,int x2,int y2) {
 		Warlands ret = w.copy();
-		if(ret.getDice()[x2][y2].getPlayer()) {
-			ret.setVp1(ret.getVp1()+ret.getDice()[x1][y1].getValue());
+		if(ret.getDice()[x2][y2].getPlayer().equals(w.getP1())) {
+			int fieldBonus=0;
+			if(x1>3) {
+				fieldBonus=x1-3;
+			}
+			ret.setVp1(ret.getVp1()+ret.getDice()[x1][y1].getValue()+fieldBonus);
 		}else {
-				ret.setVp2(ret.getVp2()+ret.getDice()[x1][y1].getValue());
+			int fieldBonus=0;
+			if(x1<3) {
+				fieldBonus=3-x1;
+			}
+				ret.setVp2(ret.getVp2()+ret.getDice()[x1][y1].getValue()+fieldBonus);
 		}
 		return ret;
 	}

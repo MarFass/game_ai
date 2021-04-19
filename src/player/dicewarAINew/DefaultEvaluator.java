@@ -122,6 +122,8 @@ public class DefaultEvaluator implements Evaluator<DiceWar> {
 	@Override
 	public double value(GameState<DiceWar> gs, Player<DiceWar> p) {
 		// TODO Auto-generated method stub
-		return value((Warlands)gs,gs.getCurrentPlayer());
+		return value((Warlands)gs,p);
 	}
+	
+	
 }
