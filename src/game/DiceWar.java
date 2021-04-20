@@ -65,7 +65,7 @@ public class DiceWar extends Game<DiceWar>{
 	
 
 	public static void main(String[] args) {
-		DiceWar g=new DiceWar(new DiceWarTreeKI("p1",4, new DefaultEvaluator()),new DW_DefaultKonsolenSpieler("p2"));
+		DiceWar g=new DiceWar(new DiceWarTreeKI("p1",3, new DefaultEvaluator()),new DW_DefaultKonsolenSpieler("p2"));
 		g.startGame();
 		List<Player<DiceWar>> winner = null;
 		int maxTurns=30;
