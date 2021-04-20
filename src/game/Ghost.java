@@ -14,33 +14,31 @@ public class Ghost extends Monster {
 				newW.getDice()[x-2][y]=newW.getDice()[x][y];
 				newW.getDice()[x][y]=null;
 				if(newW.getDice()[x-1][y]!=null) {
-					if(newW.getDice()[x-1][y].getPlayer()!=newW.getDice()[x-2][y].getPlayer()) {
 						newW.setTp1(newW.getTp1()+1);
 						if(newW.getDice()[x-1][y].getValue()==1) {
 							newW.getDice()[x-1][y]=null;
 						}else {
 							newW.getDice()[x-1][y]=new Die(newW.getDice()[x-1][y].getValue()-1,newW.getDice()[x-1][y].getPlayer());
 						}
-					}else {
+					
 				}
 				ret.add(newW);
 			}
-			}
 		}
+		
 		if(x+2<=6) {
 			if(w.getDice()[x+2][y]==null){
 				newW=w.copy();
 				newW.getDice()[x+2][y]=newW.getDice()[x][y];
 				newW.getDice()[x][y]=null;
 				if(newW.getDice()[x+1][y]!=null) {
-					if(newW.getDice()[x+1][y].getPlayer()!=newW.getDice()[x+2][y].getPlayer()) {
 						newW.setTp1(newW.getTp1()+1);
 						if(newW.getDice()[x+1][y].getValue()==1) {
 							newW.getDice()[x+1][y]=null;
 						}else {
 							newW.getDice()[x+1][y]=new Die(newW.getDice()[x+1][y].getValue()-1,newW.getDice()[x+1][y].getPlayer());
 						}
-					}
+					
 				}
 				ret.add(newW);
 			}
@@ -51,14 +49,13 @@ public class Ghost extends Monster {
 				newW.getDice()[x][y-2]=newW.getDice()[x][y];
 				newW.getDice()[x][y]=null;
 				if(newW.getDice()[x][y-1]!=null) {
-					if(newW.getDice()[x][y-1].getPlayer()!=newW.getDice()[x][y-2].getPlayer()) {
 						newW.setTp1(newW.getTp1()+1);
 						if(newW.getDice()[x][y-1].getValue()==1) {
 							newW.getDice()[x][y-1]=null;
 						}else {
 							newW.getDice()[x][y-1]=new Die(newW.getDice()[x][y-1].getValue()-1,newW.getDice()[x][y-1].getPlayer());
 						}
-					}
+					
 				}
 				ret.add(newW);
 			}
@@ -69,14 +66,13 @@ public class Ghost extends Monster {
 				newW.getDice()[x][y+2]=newW.getDice()[x][y];
 				newW.getDice()[x][y]=null;
 				if(newW.getDice()[x][y+1]!=null) {
-					if(newW.getDice()[x][y+1].getPlayer()!=newW.getDice()[x][y+2].getPlayer()) {
 						newW.setTp1(newW.getTp1()+1);
 						if(newW.getDice()[x][y+1].getValue()==1) {
 							newW.getDice()[x][y+1]=null;
 						}else {
 							newW.getDice()[x][y+1]=new Die(newW.getDice()[x][y+1].getValue()-1,newW.getDice()[x][y+1].getPlayer());
 						}
-					}
+					
 				}
 				ret.add(newW);
 			}
