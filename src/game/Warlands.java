@@ -162,8 +162,11 @@ public class Warlands implements GameState<DiceWar>{
 		ret+="--- Warlands: ---\n";
 		ret+="VP1: "+vp1+" TP1: "+tp1+" Reserve: "+reserve1+"\n";
 		ret+="VP2: "+vp2+" TP2: "+tp2+" Reserve: "+reserve2+"\n";
+		ret+="   0   1   2   3   4   5   6 \n";
 		for(int x=0;x<dice[0].length;x++) {
+			ret+=x+" ";
 			for(int y=0;y<dice.length;y++) {
+				
 				if(dice[x][y]==null) {
 					ret+="ooo ";
 				}else {
